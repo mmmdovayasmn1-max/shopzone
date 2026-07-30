@@ -25,34 +25,43 @@ const handleSelect = (theme) => {
 
         <div className="cards">
 
-          <div className="card female">
-           <img src={heart} alt="For Her" className="icon" />
-            <h2>For Her</h2>
+  <div className="card female">
+    <img src={heart} alt="For Her" className="card-image" />
 
-            <p>
-              Fashion • Beauty
-              <br />
-              Accessories • More
-            </p>
-            <button onClick={() => handleSelect("female")}> Select</button>
-           
-        
-          </div>
+    <div className="card-content">
+      <h2>For Her</h2>
 
-          <div className="card male">
-            <img src={bag} alt="For Him" className="icon" />
-            <h2>For Him</h2>
+      <p>
+        Fashion • Beauty
+        <br />
+        Accessories • More
+      </p>
 
-            <p>
-              Fashion • Sneakers
-              <br />
-              Watches • More
-            </p>
+      <button onClick={() => handleSelect("female")}>
+         Les't Go
+      </button>
+    </div>
+  </div>
 
-            <button onClick={() => handleSelect("male")}>Select</button>
-          </div>
+  <div className="card male">
+    <img src={bag} alt="For Him" className="card-image" />
 
-        </div>
+    <div className="card-content">
+      <h2>For Him</h2>
+
+      <p>
+        Fashion • Sneakers
+        <br />
+        Watches • More
+      </p>
+
+      <button onClick={() => handleSelect("male")}>
+        Les't Go
+      </button>
+    </div>
+  </div>
+
+</div>
 
         <p className="bottom-text">
           ⚙️ You can change this anytime in settings

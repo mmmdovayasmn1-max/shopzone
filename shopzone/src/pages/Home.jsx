@@ -1,10 +1,10 @@
 import "./Home.css";
 import hero from "../assets/images/hero.png";
-
+import Navbar from "../components/Navbar/Navbar";
 function Home() {
   return (
     <div className="home">
-
+      <Navbar/>
       <section className="hero">
 
         <img src={hero} alt="Hero" className="hero-banner" />
