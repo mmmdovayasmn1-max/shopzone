@@ -1,0 +1,51 @@
+.services{
+    width:95%;
+    margin: 10px auto 18px;
+    padding:10px 18px;
+    background:#fff;
+    border-radius:24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.service{
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    gap:8px;
+    flex:1;
+    padding: 4px 8px;
+    border-right: none;
+    }
+
+.service:not(:last-child){
+    border-right:1px solid #eee;
+}
+
+
+.service h3{
+    font-size:13px;
+    margin-bottom:2px;
+}
+.service:hover h3 {
+  color: #ff4f9a;
+}
+
+.service p{
+    font-size:10px;
+    color:#777;
+    line-height:1.2;
+}
+.service svg {
+  color: #555;
+  font-size: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.service:hover svg {
+  color: #ff4f9a;
+}

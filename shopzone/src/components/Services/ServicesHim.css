@@ -1,0 +1,51 @@
+.services-him{
+    width:95%;
+    margin: 10px auto 18px;
+    padding:10px 18px;
+    background:#fff;
+    border-radius:24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.service-him{
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    gap:8px;
+    flex:1;
+    padding: 4px 8px;
+    border-right: none;
+    }
+
+.service-him:not(:last-child){
+    border-right:1px solid #eee;
+}
+
+
+.service-him h3{
+    font-size:13px;
+    margin-bottom:2px;
+}
+.service-him:hover h3 {
+  color: #3b82f6;
+}
+
+.service-him p{
+    font-size:10px;
+    color:#777;
+    line-height:1.2;
+}
+.service-him svg {
+  color: #555;
+  font-size: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.service-him:hover svg {
+  color:#3b82f6 ;
+}

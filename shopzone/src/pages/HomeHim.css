@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+.home-him{
+
+    padding:40px;
+    background:#fff;
+}
+
+.hero-him{
+    position:relative;
+    width:95%;
+    max-width:1400px;
+    margin:25px auto;
+    margin-top: 15px;
+}
+
+.hero-banner-him{
+    width:100%;
+    display:block;
+    border-radius:30px;
+}
+
+.hero-content-him{
+    position:absolute;
+    top:50%;
+    left: 45px;
+    transform:translateY(-50%);
+    width:340px;
+}
+
+.hero-content-him h1{
+    font-size:48px;
+    line-height:1.05;
+    font-weight:800;
+    color:#3a2a35;
+    letter-spacing: -1px;
+}
+
+.hero-content-him span{
+    color:#3b82f6;
+}
+
+.hero-content-him p{
+    margin:18px 0 28px;
+    font: size 16px;
+    color:#666;
+    line-height:1.6;
+}
+
+.hero-buttons-him{
+    display:flex;
+    gap:12px;
+}
+
+.shop-btn-him{
+    background:#3b82f6;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:13px 26px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.deal-btn-him{
+    background:#fff;
+    color:#3b82f6;
+    border:none;
+    border-radius:12px;
+    padding:13px 26px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}

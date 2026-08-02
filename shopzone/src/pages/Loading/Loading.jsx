@@ -5,13 +5,19 @@ import { useNavigate } from "react-router-dom";
 const Loading = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/home");
-    }, 3000);
+ useEffect(() => {
+  const theme = localStorage.getItem("theme");
 
-    return () => clearTimeout(timer);
-  }, [navigate]);
+  const timer = setTimeout(() => {
+    if (theme === "male") {
+      navigate("/home-him");
+    } else {
+      navigate("/home");
+    }
+  }, 3000);
+
+  return () => clearTimeout(timer);
+}, [navigate]);
 
   return (
     <div className="loading-page">
