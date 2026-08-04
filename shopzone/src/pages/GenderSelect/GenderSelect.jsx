@@ -8,7 +8,12 @@ const GenderSelect = () => {
 
 const handleSelect = (theme) => {
   localStorage.setItem("theme", theme);
-  navigate("/loading");
+
+  if (theme === "male") {
+    navigate("/loading-him");
+  } else {
+    navigate("/loading");
+  }
 };
   return (
     <div className="gender-page">

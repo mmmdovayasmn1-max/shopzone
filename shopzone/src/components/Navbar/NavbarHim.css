@@ -22,7 +22,7 @@
 
 .logo-him h2{
     font-size:30px;
-    color:#222;
+    color:#3b82f6;
 }
 
 .logo-him span{
@@ -85,12 +85,21 @@
     box-shadow:0 8px 20px rgba(0,0,0,.06);
 }
 
-.navbar-menu-him a{
-    text-decoration:none;
-    color:#444;
-    font-weight:600;
-    transition:.3s;
-}
+
 
 .navbar-menu-him a:hover{
    color:#3b82f6}
+
+
+  .navbar-menu-him a {
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+
+.navbar-menu-him a.active {
+  color: #3b82f6;
+  border-bottom: 3px solid #3b82f6;
+}

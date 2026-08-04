@@ -2,6 +2,8 @@ import "./Home.css";
 import hero from "../assets/images/hero.png";
 import Navbar from "../components/Navbar/Navbar";
 import Services from "../components/Services/Services";
+import FeaturedProductsHer from "../components/FeaturedProducts/FeaturedProductsHer";
+
 function Home() {
   return (
     <div className="home">
@@ -29,6 +31,8 @@ function Home() {
 
       </section>
      <Services/>
+     <FeaturedProductsHer />
+    
     </div>
   );
 }

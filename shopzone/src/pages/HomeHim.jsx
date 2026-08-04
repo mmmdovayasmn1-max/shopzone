@@ -4,6 +4,8 @@ import NavbarHim from "../components/Navbar/NavbarHim";
 import heroHim from "../assets/images/heroHim.png";
 import ServicesHim from "../components/Services/ServicesHim";
 
+import FeaturedProductsHim from "../components/FeaturedProducts/FeaturedProductsHim";
+
 function HomeHim() {
   return (
     <div className="home-him">
@@ -37,6 +39,8 @@ function HomeHim() {
 </section>
 
       <ServicesHim />
+      <FeaturedProductsHim/>
+    
     </div>
   );
 }

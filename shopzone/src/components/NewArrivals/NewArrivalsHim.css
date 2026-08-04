@@ -1,0 +1,110 @@
+.new-arrivals-him{
+    width:95%;
+    max-width:1400px;
+    margin:70px auto;
+}
+
+.new-header-him{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.new-badge-him{
+    display:inline-block;
+    background:#3b82f6;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.new-header-him h2{
+    font-size:38px;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.new-header-him p{
+    color:#777;
+    font-size:16px;
+}
+
+.new-grid-him{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.new-card-him{
+    background:#fff;
+    border-radius:22px;
+    padding:20px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.new-card-him:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(59,130,246,.20);
+}
+
+.tag-him{
+    position:absolute;
+    top:18px;
+    left:18px;
+    background:#3b82f6;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.sale-him{
+    background:#ff6b6b;
+}
+
+.new-image-him{
+    width:100%;
+    height:220px;
+    background:#f5f5f5;
+    border-radius:18px;
+    margin:35px 0 20px;
+}
+
+.new-card-him h3{
+    font-size:20px;
+    color:#222;
+    min-height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.price-him{
+    font-size:22px;
+    font-weight:700;
+    color:#3b82f6;
+    margin:15px 0;
+}
+
+.view-btn-him{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#3b82f6;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.view-btn-him:hover{
+    background:#2563eb;
+}

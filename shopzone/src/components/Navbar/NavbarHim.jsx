@@ -1,5 +1,5 @@
 import "./NavbarHim.css";
-
+import { Link, NavLink } from "react-router-dom";
 function NavbarHim() {
   return (
     <nav className="navbar-him">
@@ -28,14 +28,15 @@ function NavbarHim() {
       </div>
 
       <div className="navbar-menu-him">
-        <a href="#">New Arrivals</a>
+        <NavLink to="/home-him">Home</NavLink>
+        <NavLink to="/new-arrivals-him">New Arrivals</NavLink>
         <a href="#">Clothing</a>
         <a href="#">Sneakers</a>
         <a href="#">Watches</a>
         <a href="#">Grooming</a>
         <a href="#">Accessories</a>
-        <a href="#">Deals</a>
-        <a href="#">Contact</a>
+        
+        
       </div>
 
     </nav>

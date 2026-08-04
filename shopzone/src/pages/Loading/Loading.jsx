@@ -14,7 +14,7 @@ const Loading = () => {
     } else {
       navigate("/home");
     }
-  }, 3000);
+  }, 1500);
 
   return () => clearTimeout(timer);
 }, [navigate]);
@@ -31,3 +31,5 @@ const Loading = () => {
 };
 
 export default Loading;
+
+
