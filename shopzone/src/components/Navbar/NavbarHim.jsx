@@ -30,12 +30,11 @@ function NavbarHim() {
       <div className="navbar-menu-him">
         <NavLink to="/home-him">Home</NavLink>
         <NavLink to="/new-arrivals-him">New Arrivals</NavLink>
-        <a href="#">Clothing</a>
-        <a href="#">Sneakers</a>
-        <a href="#">Watches</a>
-        <a href="#">Grooming</a>
-        <a href="#">Accessories</a>
-        
+        <NavLink to="/clothing">Clothing</NavLink>
+        <NavLink to="/sneakers">Sneakers</NavLink>
+        <NavLink to="/watches">Watches</NavLink>
+        <NavLink to="/grooming">Grooming</NavLink>
+        <NavLink to="/accessories-him">Accessories</NavLink> 
         
       </div>
 

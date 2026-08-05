@@ -30,11 +30,11 @@ function Navbar() {
       <div className="navbar-menu">
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/new-arrivals-her">New Arrivals</NavLink>
-        <a href="#">Dresses</a>
-        <a href="#">Shoes</a>
-        <a href="#">Bags</a>
-        <a href="#">Beauty</a>
-        <a href="#">Accessories</a>
+        <NavLink to="/dresses">Dresses</NavLink>
+        <NavLink to="/shoes">Shoes</NavLink>
+        <NavLink to="/bags">Bags</NavLink>
+        <NavLink to="/beauty">Beauty</NavLink>
+        <NavLink to="/accessories">Accessories</NavLink>
         
       
       </div>

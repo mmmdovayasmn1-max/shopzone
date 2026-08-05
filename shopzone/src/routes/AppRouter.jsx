@@ -13,6 +13,16 @@ import NewArrivalsPageHer from "../pages/NewArrivalsPageHer";
 import NewArrivalsPageHim from "../pages/NewArrivalsPageHim";
 import ProductDetailsHer from "../pages/ProductDetailsHer";
 import ProductDetailsHim from "../pages/ProductDetailsHim";
+import Dresses from "../components/Dresses/Dresses";
+import Shoes from "../components/Shoes/Shoes";
+import Bags from "../components/Bags/Bags";
+import Beauty from "../components/Beauty/Beauty";
+import Accessories from "../components/Accessories/Accessories";
+import Clothing from "../components/Clothing/Clothing";
+import Sneakers from "../components/Sneakers/Sneakers";
+import Watches from "../components/Watches/Watches";
+import Grooming from "../components/Grooming/Grooming";
+import AccessoriesHim from "../components/Accessories/AccessoriesHim";
 function AppRouter() {
   return (
     
@@ -24,8 +34,18 @@ function AppRouter() {
   <Route path="/home-him" element={<HomeHim/>} />
    <Route path="/new-arrivals-her" element={<NewArrivalsPageHer />} />
    <Route path="/new-arrivals-him"element={<NewArrivalsPageHim />} />
+   <Route path="/dresses" element={<Dresses />} />
+<Route path="/shoes" element={<Shoes />} />
+<Route path="/bags" element={<Bags />} />
+<Route path="/beauty" element={<Beauty />} />
+<Route path="/accessories" element={<Accessories />} />
    <Route path="/product-details-her" element={<ProductDetailsHer/>} />
    <Route path="/product-details-him" element={<ProductDetailsHim/>} />
+   <Route path="/clothing" element={<Clothing />} />
+<Route path="/sneakers" element={<Sneakers />} />
+<Route path="/watches" element={<Watches />} />
+<Route path="/grooming" element={<Grooming />} />
+<Route path="/accessories-him" element={<AccessoriesHim />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
 

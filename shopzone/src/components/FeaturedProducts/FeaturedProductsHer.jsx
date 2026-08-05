@@ -1,12 +1,16 @@
 import "./FeaturedProductsHer.css";
 import { useState } from "react";
-import pinkBag from "../../assets/images/HER/pink-bag.png";
-import pinkHighHeeledShoes from "../../assets/images/HER/pink-high-heeled-shoes.png";
-import bloomPerfume from "../../assets/images/HER/bloom-perfume.png";
-import makeupSet from "../../assets/images/HER/makeup-set.png";
-
+import { womenProducts } from "../../data/products";
 const FeaturedProductsHer = () => {
   const [activeCategory, setActiveCategory]= useState("All");
+  const products = womenProducts
+const filteredProducts =
+  activeCategory === "All"
+    ? products
+    : products.filter(
+        (product) => product.category === activeCategory
+      );
+
   return (
     <section className="featured-products-her">
 
@@ -45,56 +49,31 @@ const FeaturedProductsHer = () => {
   </button>
 
   <button
-    className={activeCategory === "Beauty" ? "active-her" : ""}
-    onClick={() => setActiveCategory("Beauty")}
+    className={activeCategory === "Perfume" ? "active-her" : ""}
+    onClick={() => setActiveCategory("Perfume")}
   >
-    Beauty
+    Perfume
   </button>
 </div>
 
-      <div className="product-grid-her">
-
-        <div className="product-card-her">
-          ❤️
-          <div className="product-image-her"> 
-            <img src={pinkBag} alt=" Pink Bag" />
-          </div>
-          <h3>Pink Bag</h3>
-          <p className="price-her">$89</p>
-          <button>Buy Now</button>
-        </div>
-
-        <div className="product-card-her">
-          ❤️
-          <div className="product-image-her">
-         <img src={pinkHighHeeledShoes} alt="Pink High Heeled Shoes" />
-         </div>
-          <h3>Pink High-Heeled Shoes</h3>
-          <p className="price-her">$75</p>
-          <button>Buy Now</button>
-        </div>
-
-        <div className="product-card-her">
-          ❤️
-          <div className="product-image-her">
-          <img src={bloomPerfume} alt="Bloom Perfume" />
-          </div>
-          <h3>Carolina Herrera Perfume</h3>
-          <p className="price-her">$95</p>
-          <button>Buy Now</button>
-        </div>
-
-        <div className="product-card-her">
-          ❤️
-         <div className="product-image-her">
-         <img src={makeupSet} alt="Makeup Set" />
-         </div>
-          <h3>Princess Dress</h3>
-          <p className="price-her">$120</p>
-          <button>Buy Now</button>
-        </div>
-
+        <div className="product-grid-her">
+  {filteredProducts.map((product) => (
+    <div className="product-card-her" key={product.id}>
+      🩷
+      <div className="product-image-her">
+        <img src={product.image} alt={product.name} />
       </div>
+
+      <h3>{product.name}</h3>
+
+      <p className="price-her">${product.price}</p>
+
+      <button>Buy Now</button>
+    </div>
+  ))}
+
+       
+   </div>
 
     </section>
   );
