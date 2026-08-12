@@ -20,8 +20,8 @@ function NavbarHim() {
         </div>
 
         <div className="nav-icons-him">
-          <span>🤍</span>
-          <span>🛒</span>
+          <Link to="/wishlist">🤍</Link>
+          <Link to="/cart"><span>🛒</span></Link>
           <span>👤</span>
         </div>
 

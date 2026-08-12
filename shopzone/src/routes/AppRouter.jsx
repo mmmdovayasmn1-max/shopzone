@@ -23,6 +23,8 @@ import Sneakers from "../components/Sneakers/Sneakers";
 import Watches from "../components/Watches/Watches";
 import Grooming from "../components/Grooming/Grooming";
 import AccessoriesHim from "../components/Accessories/AccessoriesHim";
+import Cart from "../components/Cart/Cart";
+import Wishlist from "../pages/Wishlist/Wishlist";
 function AppRouter() {
   return (
     
@@ -39,13 +41,15 @@ function AppRouter() {
 <Route path="/bags" element={<Bags />} />
 <Route path="/beauty" element={<Beauty />} />
 <Route path="/accessories" element={<Accessories />} />
-   <Route path="/product-details-her" element={<ProductDetailsHer/>} />
-   <Route path="/product-details-him" element={<ProductDetailsHim/>} />
+   <Route path="/product/her/:id" element={<ProductDetailsHer/>} />
+   <Route path="/product/him/:id" element={<ProductDetailsHim/>} />
    <Route path="/clothing" element={<Clothing />} />
 <Route path="/sneakers" element={<Sneakers />} />
 <Route path="/watches" element={<Watches />} />
 <Route path="/grooming" element={<Grooming />} />
 <Route path="/accessories-him" element={<AccessoriesHim />} />
+<Route path="/cart" element={<Cart />} />
+<Route path="/wishlist" element={<Wishlist />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
 

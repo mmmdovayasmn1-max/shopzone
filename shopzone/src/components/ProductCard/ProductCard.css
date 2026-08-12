@@ -1,0 +1,168 @@
+.product-card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HER PRODUCT CARD
+   ========================= */
+
+.product-card.her {
+    border-radius: 20px;
+}
+
+
+/* HER - Wishlist */
+.product-card.her .wishlist-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+
+    width: calc(100% - 24px);
+    height: 55px;
+    background: #d93691 !important;
+    color: white;
+
+
+    border: none;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.25s ease;
+}
+
+.product-card.her .wishlist-btn:hover {
+    background: #d93691 !important;
+    transform: translateY(-2px);
+}
+
+
+/* HER - Wishlist seçiləndə */
+.product-card.her .wishlist-btn.wishlist-active {
+    color: red !important;
+}
+
+
+/* HER - Şəkil */
+.product-card.her img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    margin-top: 55px;
+}
+
+
+/* HER - Məhsul adı */
+.product-card.her h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+
+    color: #d93691;
+    text-decoration: none;
+}
+
+
+/* Əgər məhsul adı link içindədirsə */
+.product-card.her h3 a {
+    color: #d93691;
+    text-decoration: none;
+}
+
+
+/* HER - Qiymət */
+.product-card.her p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d93691;
+}
+
+
+/* HER - Basket */
+.product-card.her .basket-button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #d93691;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-card.her .basket-button:hover {
+    background: #c52b82;
+}
+
+.product-card.her .basket-button.added {
+    background: #22c55e;
+}
+
+
+/* =========================
+   HIM
+   ========================= */
+
+/*
+   HIM üçün əvvəlki qaydaları saxlayırıq.
+   Ona görə aşağıdakı ümumi qaydalar
+   HIM-ə təsir etməyəcək.
+*/
+
+.product-card.him img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    margin-top: 55px;
+}
+
+.product-card.him h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.product-card.him p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+.product-card.him .basket-button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #3b82f6;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product-card.him .basket-button:hover {
+    background: #2563eb;
+}
+
+.product-card.him .basket-button.added {
+    background: #22c55e;
+}

@@ -1,0 +1,21 @@
+.sneakers-page {
+  padding: 40px;
+}
+
+.sneakers-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sneakers-card {
+  width: 200px;
+  text-align: center;
+}
+
+.sneakers-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

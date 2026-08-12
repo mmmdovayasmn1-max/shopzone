@@ -1,5 +1,6 @@
-import "./Dresses.css";
+import "../../styles/ProductCard.css";
 import Navbar from "../Navbar/Navbar";
+import ProductCard from "../ProductCard/ProductCard";
 import { womenProducts } from "../../data/products";
 
 function Dresses() {
@@ -11,16 +12,14 @@ function Dresses() {
     <>
       <Navbar />
 
-      <div className="dresses-page">
-        <h1>Dresses</h1>
-
-        <div className="dresses-grid">
+      <div className="product-page women-category-page">
+        <div className="product-grid">
           {dresses.map((product) => (
-            <div key={product.id}>
-              <img src={product.image} alt={product.name} width="200" />
-              <h3>{product.name}</h3>
-              <p>${product.price}</p>
-            </div>
+            <ProductCard
+              key={product.id}
+              product={product}
+              gender="women"
+            />
           ))}
         </div>
       </div>

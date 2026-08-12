@@ -1,8 +1,15 @@
 import "./FeaturedProductsHer.css";
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 import { womenProducts } from "../../data/products";
+import { useCart } from "../../context/CartContext";
+import WishlistButton from "../WishlistButton/WishlistButton";
 const FeaturedProductsHer = () => {
-  const [activeCategory, setActiveCategory]= useState("All");
+  const { addToCart, cartItems } = useCart();
+  const navigate = useNavigate();
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [addedProducts, setAddedProducts] = useState([]);
+
   const products = womenProducts
 const filteredProducts =
   activeCategory === "All"
@@ -58,17 +65,36 @@ const filteredProducts =
 
         <div className="product-grid-her">
   {filteredProducts.map((product) => (
-    <div className="product-card-her" key={product.id}>
-      🩷
-      <div className="product-image-her">
-        <img src={product.image} alt={product.name} />
-      </div>
+   <div className="product-card-her" key={product.id}>
+  
+  <WishlistButton product={product} variant="her" />
 
-      <h3>{product.name}</h3>
+  <div
+  className="product-image-her"
+  onClick={() => navigate(`/product/her/${product.id}`)}
+>
+  <img src={product.image} alt={product.name} />
+</div>
 
-      <p className="price-her">${product.price}</p>
+<h3 onClick={() => navigate(`/product/her/${product.id}`)}>
+  {product.name}
+</h3>
+  <p className="price-her">${product.price}</p>
+      
 
-      <button>Buy Now</button>
+      
+
+    <button
+  className={addedProducts.includes(product.id) ? "added-btn" : ""}
+  onClick={() => {
+    addToCart(product);
+    setAddedProducts((prev) => [...prev, product.id]);
+  }}
+>
+  {addedProducts.includes(product.id)
+    ? "✓ Added to Basket"
+    : "Add to Basket"}
+</button>
     </div>
   ))}
 

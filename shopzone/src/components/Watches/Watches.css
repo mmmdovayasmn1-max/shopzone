@@ -1,0 +1,21 @@
+.watches-page {
+  padding: 40px;
+}
+
+.watches-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.watches-card {
+  width: 200px;
+  text-align: center;
+}
+
+.watches-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

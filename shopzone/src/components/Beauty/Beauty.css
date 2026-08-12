@@ -1,0 +1,21 @@
+.beauty-page {
+  padding: 40px;
+}
+
+.beauty-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.beauty-card {
+  width: 200px;
+  text-align: center;
+}
+
+.beauty-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

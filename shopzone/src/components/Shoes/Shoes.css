@@ -1,0 +1,21 @@
+.shoes-page {
+  padding: 40px;
+}
+
+.shoes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.shoes-card {
+  width: 200px;
+  text-align: center;
+}
+
+.shoes-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

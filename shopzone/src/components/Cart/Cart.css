@@ -1,0 +1,186 @@
+.cart-page {
+  min-height: 100vh;
+  padding: 50px 8%;
+  background: #fff8fc;
+}
+
+.cart-page h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 45px;
+  color: #333;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cart-products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  color: #333;
+}
+
+.cart-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e45a91;
+  margin-bottom: 15px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: #f4d5e4;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.quantity span {
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove-btn {
+  border: none;
+  background: none;
+  color: #999;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.remove-btn:hover {
+  color: #e45a91;
+}
+
+.item-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-summary {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  height: fit-content;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-summary h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.summary-row,
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  color: #555;
+}
+
+.free {
+  color: #55a66a;
+  font-weight: 600;
+}
+
+.total-row {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  background: #e45a91;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.checkout-btn:hover {
+  background: #d94782;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.empty-cart h2 {
+  color: #444;
+}
+
+.empty-cart p {
+  color: #999;
+}
+
+
+/* Telefon üçün */
+@media (max-width: 800px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    flex-wrap: wrap;
+  }
+
+  .cart-item-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .item-total {
+    margin-left: auto;
+  }
+}

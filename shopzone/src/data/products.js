@@ -20,6 +20,11 @@ import bloomPerfume from "../assets/images/HER/bloom-perfume.png";
 import alienPerfume from "../assets/images/HER/alien-perfume.png";
 import blackOpiumPerfume from "../assets/images/HER/black-opium-perfume.png";
 import goodGirlPerfume from "../assets/images/HER/good-girl-perfume.png";
+
+import goldNecklace from "../assets/images/HER/gold-necklace.png";
+import pearlEarrings from "../assets/images/HER/pearl-earrings.png";
+import luxurySunglasses from "../assets/images/HER/luxury-sunglasses.png";
+import silverBracelet from "../assets/images/HER/silver-bracelet.png";
 //===============================================================================
 //                FOR MEN
 //===============================================================================
@@ -39,6 +44,10 @@ import pumaRSX from "../assets/images/HIM/puma-rsx.png";
 import versaceEros from "../assets/images/HIM/versace-eros.png";
 import oversizedTshirt from "../assets/images/HIM/oversized-tshirt.png";
 import tissotPRX from "../assets/images/HIM/tissot-prx.png";
+import leatherWallet from "../assets/images/HIM/leather-wallet.png";
+import classicBelt from "../assets/images/HIM/classic-belt.png";
+import blackCap from "../assets/images/HIM/black-cap.png";
+import raybanSunglasses from "../assets/images/HIM/rayban-sunglasses.png";
 //=================================================================
 //                      WOMEN
 //=================================================================
@@ -59,14 +68,14 @@ export const womenProducts = [
   },
   {
     id: 3,
-    name: "Bloom Perfume",
+    name: "La Bomba",
     category: "Perfume",
     price: 95,
     image: bloomPerfume,
   },
   {
     id: 4,
-    name: "Makeup Set",
+    name: "Princess Dress",
     category: "Dresses",
     price: 120,
     image: makeupSet,
@@ -158,6 +167,34 @@ export const womenProducts = [
     price: 260,
     image: versaceShoes,
   },
+  {
+  id: 17,
+  name: "Gold Necklace",
+  category: "Accessories",
+  price: 85,
+  image: goldNecklace,
+},
+{
+  id: 18,
+  name: "Pearl Earrings",
+  category: "Accessories",
+  price: 65,
+  image: pearlEarrings,
+},
+{
+  id: 19,
+  name: "Luxury Sunglasses",
+  category: "Accessories",
+  price: 140,
+  image: luxurySunglasses,
+},
+{
+  id: 20,
+  name: "Silver Bracelet",
+  category: "Accessories",
+  price: 95,
+  image: silverBracelet,
+},
  
 ];
 //========================================================
@@ -275,5 +312,33 @@ export const menProducts =[
   category: "Watches",
   price: 380,
   image: tissotPRX,
+},
+{
+  id: 17,
+  name: "Leather Wallet",
+  category: "Accessories",
+  price: 70,
+  image: leatherWallet,
+},
+{
+  id: 18,
+  name: "Classic Belt",
+  category: "Accessories",
+  price: 60,
+  image: classicBelt,
+},
+{
+  id: 19,
+  name: "Black Cap",
+  category: "Accessories",
+  price: 45,
+  image: blackCap,
+},
+{
+  id: 20,
+  name: "Ray-Ban Sunglasses",
+  category: "Accessories",
+  price: 160,
+  image: raybanSunglasses,
 },
 ];

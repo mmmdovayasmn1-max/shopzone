@@ -1,0 +1,154 @@
+.product-page {
+  padding: 40px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 200px;
+  min-height: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  padding-bottom: 35;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.product-card h3 {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  margin: 12px 0 8px;
+  font-size: 18px;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+  font-size: 18px;
+  font-weight:700;
+  color: #ff4f81;
+}
+
+.product-card .product-link,
+.product-card .wishlist-btn,
+.product-card .basket-button {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Dresses, Shoes, Bags, Beauty və Accessories kateqoriyaları */
+.women-category-page .product-card h3,
+.women-category-page .product-card h3 a,
+.women-category-page .product-card p {
+  color: #f472b6;
+}
+
+.women-category-page .product-card img {
+  margin-top: 55px;
+}
+
+
+.product-card .basket-button {
+  width: 170px;
+  height: 45px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #F472B6; /* Women default */
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Women - çəhrayı */
+.product-card .basket-button.women:hover {
+  background: #EC4899;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
+}
+
+/* Him - mavi */
+.product-card .basket-button.him {
+  background: #2563EB;
+}
+
+.product-card .basket-button.him:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Səbətə əlavə olunandan sonra - yaşıl */
+.product-card .basket-button.added {
+  background: #22C55E;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.product-card .basket-button.added:hover {
+  background: #16A34A;
+}
+
+.product-card .basket-button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 992px) {
+  .product-grid {
+    gap: 15px;
+  }
+
+  .product-card {
+    width: 150px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 170px;
+  }
+
+  .product-card img {
+    width: 150px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}

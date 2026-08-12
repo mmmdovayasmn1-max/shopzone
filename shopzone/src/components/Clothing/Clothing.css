@@ -1,0 +1,21 @@
+.clothing-page {
+  padding: 40px;
+}
+
+.clothing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.clothing-card {
+  width: 200px;
+  text-align: center;
+}
+
+.clothing-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

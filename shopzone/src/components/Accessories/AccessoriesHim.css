@@ -1,0 +1,21 @@
+.accessories-page {
+  padding: 40px;
+}
+
+.accessories-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.accessories-card {
+  width: 200px;
+  text-align: center;
+}
+
+.accessories-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

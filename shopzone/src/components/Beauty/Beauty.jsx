@@ -1,7 +1,8 @@
-import "./Beauty.css";
+import "../../styles/ProductCard.css";
 import Navbar from "../Navbar/Navbar";
-import { womenProducts } from "../../data/products";
 
+import { womenProducts } from "../../data/products";
+import ProductCard from "../ProductCard/ProductCard";
 function Beauty() {
   const beauty = womenProducts.filter(
     (product) => product.category === "Perfume"
@@ -11,16 +12,14 @@ function Beauty() {
     <>
       <Navbar />
 
-      <div className="beauty-page">
-        <h1>Beauty</h1>
-
-        <div className="beauty-grid">
+      <div className="product-page women-category-page">
+        <div className="product-grid">
           {beauty.map((product) => (
-            <div key={product.id}>
-              <img src={product.image} alt={product.name} width="200" />
-              <h3>{product.name}</h3>
-              <p>${product.price}</p>
-            </div>
+            <ProductCard
+              key={product.id}
+              product={product}
+              gender="women"
+            />
           ))}
         </div>
       </div>

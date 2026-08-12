@@ -1,0 +1,21 @@
+.bags-page {
+  padding: 40px;
+}
+
+.bags-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bags-card {
+  width: 200px;
+  text-align: center;
+}
+
+.bags-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}

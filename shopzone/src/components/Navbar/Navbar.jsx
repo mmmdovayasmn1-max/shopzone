@@ -20,8 +20,8 @@ function Navbar() {
         </div>
 
         <div className="nav-icons">
-          <span>🤍</span>
-          <span>🛒</span>
+          <Link to="/wishlist">🤍</Link>
+          <Link to= "/cart"><span>🛒 </span></Link>
           <span>👤</span>
         </div>
 

@@ -1,0 +1,66 @@
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+
+    width: calc(100% - 24px);
+    height: 55px;
+
+    border: none;
+    border-radius: 14px;
+    color: white;
+    font-size: 27px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 10;
+
+    transition: all 0.2s ease;
+}
+
+
+/* =========================
+   HER
+========================= */
+
+.wishlist-btn.her {
+    background: #d93691 !important;
+}
+
+.wishlist-btn.her:hover {
+    background: #d93691;
+    transform: scale(1.02);
+}
+
+.wishlist-btn.women,
+.wishlist-btn.women:hover {
+    background: #f472b6;
+}
+
+
+/* =========================
+   HIM
+========================= */
+
+.wishlist-btn.him {
+    background: #4a90e2;
+}
+
+.wishlist-btn.him:hover {
+    background: #4a90e2;
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   WISHLIST ACTIVE
+========================= */
+
+.wishlist-btn.wishlist-active {
+    color: red;
+}

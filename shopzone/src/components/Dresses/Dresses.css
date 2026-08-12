@@ -1,0 +1,30 @@
+.dresses-page {
+  padding: 40px;
+}
+
+.dresses-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dresses-card {
+  width: 200px;
+  text-align: center;
+}
+
+.dresses-card img {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.dresses-card h3 {
+  margin-top: 15px;
+}
+
+.dresses-card p {
+  font-size: 20px;
+  font-weight: bold;
+}

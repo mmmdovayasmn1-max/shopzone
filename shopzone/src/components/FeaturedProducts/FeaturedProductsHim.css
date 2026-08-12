@@ -59,6 +59,7 @@
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
     transition:.35s;
+    position: relative;
 }
 
 .product-card-him:hover{
@@ -112,4 +113,11 @@
 .product-card-him button:hover{
     background: #3b82f6;
     color: #fff;
+}
+.added-btn {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+.added-btn:hover {
+  background-color: #16a34a !important;
 }
