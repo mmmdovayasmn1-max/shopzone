@@ -43,6 +43,7 @@
     padding:20px;
     text-align:center;
     position:relative;
+    overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
     transition:.35s;
 }
@@ -72,8 +73,9 @@
     width:100%;
     height:220px;
     background:#f5f5f5;
+    object-fit:contain;
     border-radius:18px;
-    margin:35px 0 20px;
+    margin:55px 0 20px;
 }
 
 .new-card-him h3{
@@ -107,4 +109,47 @@
 
 .view-btn-him:hover{
     background:#2563eb;
+}
+
+.new-product-link-him{
+    color:inherit;
+    text-decoration:none;
+}
+
+.new-card-him .wishlist-btn{
+    top:18px;
+    left:auto;
+    right:18px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    font-size:22px;
+}
+
+.view-btn-him.added{
+    background:#22c55e;
+}
+
+.new-card-him {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-card-him h3 {
+    color: #3b82f6;
+}
+
+.view-btn-him {
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .new-grid-him { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .new-arrivals-him { width: 92%; margin: 45px auto; }
+    .new-grid-him { grid-template-columns: 1fr; }
+    .new-card-him { max-width: 340px; width: 100%; margin: 0 auto; }
+    .new-header-him h2 { font-size: 30px; }
 }

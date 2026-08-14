@@ -3,8 +3,15 @@ import Navbar from "../components/Navbar/NavbarHim";
 import Footer from "../components/Footer/Footer";
 import { useParams } from "react-router-dom";
 import { menProducts } from "../data/products";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { useState } from "react";
 const ProductDetailsHim = () => {
     const { id } = useParams();
+    const { addToCart, cartItems } = useCart();
+    const { toggleWishlist, isInWishlist } = useWishlist();
+    const [selectedColor, setSelectedColor] = useState("");
+    const [selectedSize, setSelectedSize] = useState("");
 
     const product = menProducts.find(
         (item) => item.id === Number(id)
@@ -16,6 +23,8 @@ const ProductDetailsHim = () => {
 
     const isClothing = product.category === "Clothing";
     const isShoes = product.category === "Sneakers";
+    const isInCart = cartItems.some((item) => item.id === product.id);
+    const wishlistActive = isInWishlist(product.id);
 
     return (
   <>
@@ -66,9 +75,9 @@ const ProductDetailsHim = () => {
             <h4>Color</h4>
 
             <div className="color-list-him">
-              <span className="pink-him"></span>
-              <span className="black-him"></span>
-              <span className="white-him"></span>
+              <button type="button" aria-label="Blue" className={`pink-him ${selectedColor === "blue" ? "selected" : ""}`} onClick={() => setSelectedColor("blue")}></button>
+              <button type="button" aria-label="Black" className={`black-him ${selectedColor === "black" ? "selected" : ""}`} onClick={() => setSelectedColor("black")}></button>
+              <button type="button" aria-label="White" className={`white-him ${selectedColor === "white" ? "selected" : ""}`} onClick={() => setSelectedColor("white")}></button>
             </div>
           </div>
         )}
@@ -80,20 +89,11 @@ const ProductDetailsHim = () => {
 
             {isClothing ? (
               <>
-                <button>XS</button>
-                <button>S</button>
-                <button>M</button>
-                <button>L</button>
-                <button>XL</button>
+                {["XS", "S", "M", "L", "XL"].map((size) => <button key={size} className={selectedSize === size ? "selected" : ""} onClick={() => setSelectedSize(size)}>{size}</button>)}
               </>
             ) : (
               <>
-                <button>36</button>
-                <button>37</button>
-                <button>38</button>
-                <button>39</button>
-                <button>40</button>
-                <button>41</button>
+                {["36", "37", "38", "39", "40", "41"].map((size) => <button key={size} className={selectedSize === size ? "selected" : ""} onClick={() => setSelectedSize(size)}>{size}</button>)}
               </>
             )}
 
@@ -102,12 +102,12 @@ const ProductDetailsHim = () => {
 
         <div className="actions-him">
 
-          <button className="cart-btn-him">
-            Add to Cart
+          <button className={`cart-btn-him ${isInCart ? "added" : ""}`} onClick={() => addToCart(product)}>
+            {isInCart ? "✓ Added to Basket" : "Add to Basket"}
           </button>
 
-          <button className="wishlist-btn-him">
-            ♡ Wishlist
+          <button className={`wishlist-btn-him ${wishlistActive ? "active" : ""}`} onClick={() => toggleWishlist(product)}>
+            {wishlistActive ? "♥ Wishlisted" : "♡ Wishlist"}
           </button>
 
         </div>
@@ -122,4 +122,3 @@ const ProductDetailsHim = () => {
 };
 
 export default ProductDetailsHim;
-  

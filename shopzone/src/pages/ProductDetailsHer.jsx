@@ -3,9 +3,16 @@ import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { womenProducts } from "../data/products";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { useState } from "react";
 
 const ProductDetailsHer = () => {
   const { id } = useParams();
+  const { addToCart, cartItems } = useCart();
+  const { toggleWishlist, isInWishlist } = useWishlist();
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
 
   const product = womenProducts.find(
     (item) => item.id === Number(id)
@@ -16,6 +23,8 @@ const ProductDetailsHer = () => {
   }
  const isClothing = product.category === "Dresses";
 const isShoes = product.category === "Shoes";
+ const isInCart = cartItems.some((item) => item.id === product.id);
+ const wishlistActive = isInWishlist(product.id);
 
   return (
     <>
@@ -76,9 +85,9 @@ const isShoes = product.category === "Shoes";
     <h4>Color</h4>
 
     <div className="color-list-her">
-      <span className="pink-her"></span>
-      <span className="black-her"></span>
-      <span className="white-her"></span>
+      <button type="button" aria-label="Pink" className={`pink-her ${selectedColor === "pink" ? "selected" : ""}`} onClick={() => setSelectedColor("pink")}></button>
+      <button type="button" aria-label="Black" className={`black-her ${selectedColor === "black" ? "selected" : ""}`} onClick={() => setSelectedColor("black")}></button>
+      <button type="button" aria-label="White" className={`white-her ${selectedColor === "white" ? "selected" : ""}`} onClick={() => setSelectedColor("white")}></button>
     </div>
   </div>
 )}
@@ -88,19 +97,11 @@ const isShoes = product.category === "Shoes";
 
         {isClothing ? (
             <>
-                <button>XS</button>
-                <button>S</button>
-                <button>M</button>
-                <button>L</button>
+                {["XS", "S", "M", "L"].map((size) => <button key={size} className={selectedSize === size ? "selected" : ""} onClick={() => setSelectedSize(size)}>{size}</button>)}
             </>
         ) : (
             <>
-                <button>36</button>
-                <button>37</button>
-                <button>38</button>
-                <button>39</button>
-                <button>40</button>
-                <button>41</button>
+                {["36", "37", "38", "39", "40", "41"].map((size) => <button key={size} className={selectedSize === size ? "selected" : ""} onClick={() => setSelectedSize(size)}>{size}</button>)}
             </>
         )}
     </div>
@@ -108,12 +109,12 @@ const isShoes = product.category === "Shoes";
 
           <div className="actions-her">
 
-            <button className="cart-btn-her">
-              Add to Cart
+            <button className={`cart-btn-her ${isInCart ? "added" : ""}`} onClick={() => addToCart(product)}>
+              {isInCart ? "✓ Added to Basket" : "Add to Basket"}
             </button>
 
-            <button className="wishlist-btn-her">
-              ♡ Wishlist
+            <button className={`wishlist-btn-her ${wishlistActive ? "active" : ""}`} onClick={() => toggleWishlist(product)}>
+              {wishlistActive ? "♥ Wishlisted" : "♡ Wishlist"}
             </button>
 
           </div>

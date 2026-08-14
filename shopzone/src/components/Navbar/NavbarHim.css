@@ -103,3 +103,13 @@
   color: #3b82f6;
   border-bottom: 3px solid #3b82f6;
 }
+
+@media (max-width: 700px) {
+  .navbar-him { width: 92%; margin: 12px auto; }
+  .navbar-top-him { flex-wrap: wrap; gap: 14px; }
+  .logo-him { width: 100%; text-align: left; }
+  .logo-him h2 { font-size: 24px; }
+  .search-box-him { order: 3; max-width: none; flex-basis: 100%; }
+  .nav-icons-him { margin-left: auto; }
+  .navbar-menu-him { overflow-x: auto; justify-content: flex-start; gap: 20px; padding: 14px 16px; white-space: nowrap; }
+}

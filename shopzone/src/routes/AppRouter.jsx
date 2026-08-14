@@ -25,6 +25,7 @@ import Grooming from "../components/Grooming/Grooming";
 import AccessoriesHim from "../components/Accessories/AccessoriesHim";
 import Cart from "../components/Cart/Cart";
 import Wishlist from "../pages/Wishlist/Wishlist";
+import SearchResults from "../pages/SearchResults";
 function AppRouter() {
   return (
     
@@ -50,6 +51,8 @@ function AppRouter() {
 <Route path="/accessories-him" element={<AccessoriesHim />} />
 <Route path="/cart" element={<Cart />} />
 <Route path="/wishlist" element={<Wishlist />} />
+<Route path="/search/her" element={<SearchResults gender="her" />} />
+<Route path="/search/him" element={<SearchResults gender="him" />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
 

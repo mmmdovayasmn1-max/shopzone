@@ -171,7 +171,7 @@
   margin-bottom: 28px;
 }
 
-.color-list-her span {
+.color-list-her button {
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -181,7 +181,8 @@
   transition: 0.2s;
 }
 
-.color-list-her span:hover {
+.color-list-her button:hover,
+.color-list-her button.selected {
   transform: scale(1.12);
   outline: 2px solid #ff4fa3;
 }
@@ -394,4 +395,14 @@
     content: "♡";
     font-size: 25px;
   }
+}
+
+.cart-btn-her.added {
+  background: #22c55e;
+}
+
+.wishlist-btn-her.active {
+  border-color: #ff4fa3;
+  background: #fff0f7;
+  color: #e11d48;
 }

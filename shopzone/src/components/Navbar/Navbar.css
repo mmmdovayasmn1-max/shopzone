@@ -88,3 +88,13 @@
   color: #e94d9b;
   border-bottom: 3px solid #e94d9b;
 }
+
+@media (max-width: 700px) {
+  .navbar { width: 92%; margin: 12px auto; padding: 16px; }
+  .navbar-top { flex-wrap: wrap; gap: 14px; }
+  .logo { width: 100%; text-align: left; }
+  .logo h2 { font-size: 24px; }
+  .search-box { order: 3; width: 100%; max-width: none; flex-basis: 100%; }
+  .nav-icons { margin-left: auto; font-size: 22px; gap: 14px; }
+  .navbar-menu { overflow-x: auto; justify-content: flex-start; gap: 20px; padding: 14px 0 0; white-space: nowrap; }
+}

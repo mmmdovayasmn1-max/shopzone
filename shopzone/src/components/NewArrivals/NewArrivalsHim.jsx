@@ -1,77 +1,39 @@
+import { Link } from "react-router-dom";
+import { menProducts } from "../../data/products";
+import { useCart } from "../../context/CartContext";
+import WishlistButton from "../WishlistButton/WishlistButton";
 import "./NewArrivalsHim.css";
 
 const NewArrivalsHim = () => {
+  const { addToCart, cartItems } = useCart();
+  const newArrivals = menProducts.slice(0, 4);
+
   return (
     <section className="new-arrivals-him">
-
       <div className="new-header-him">
         <span className="new-badge-him">NEW ARRIVALS</span>
-
         <h2>Fresh Essentials</h2>
-
         <p>Discover the latest men's collection.</p>
       </div>
-
       <div className="new-grid-him">
-
-        <div className="new-card-him">
-          <span className="tag-him">NEW</span>
-
-          <div className="new-image-him"></div>
-
-          <h3>Black Hoodie</h3>
-
-          <p className="price-him">$85</p>
-
-          <button className="view-btn-him">
-            View Item
-          </button>
-        </div>
-
-        <div className="new-card-him">
-          <span className="tag-him sale-him">-15%</span>
-
-          <div className="new-image-him"></div>
-
-          <h3>Running Shoes</h3>
-
-          <p className="price-him">$110</p>
-
-          <button className="view-btn-him">
-            View Item
-          </button>
-        </div>
-
-        <div className="new-card-him">
-          <span className="tag-him">NEW</span>
-
-          <div className="new-image-him"></div>
-
-          <h3>Luxury Watch</h3>
-
-          <p className="price-him">$220</p>
-
-          <button className="view-btn-him">
-            View Item
-          </button>
-        </div>
-
-        <div className="new-card-him">
-          <span className="tag-him">NEW</span>
-
-          <div className="new-image-him"></div>
-
-          <h3>Blue Cologne</h3>
-
-          <p className="price-him">$95</p>
-
-          <button className="view-btn-him">
-            View Item
-          </button>
-        </div>
-
+        {newArrivals.map((product) => {
+          const isInCart = cartItems.some((item) => item.id === product.id);
+          return (
+            <article className="new-card-him" key={product.id}>
+              <span className="tag-him">NEW</span>
+              <WishlistButton product={product} variant="him" />
+              <Link to={`/product/him/${product.id}`} className="new-product-link-him">
+                <img className="new-image-him" src={product.image} alt={product.name} />
+                <h3>{product.name}</h3>
+              </Link>
+              <p className="price-him">${product.price}</p>
+              <button className={`view-btn-him ${isInCart ? "added" : ""}`} onClick={() => addToCart(product)}>
+                {isInCart ? "✓ Added to Basket" : "Add to Basket"}
+              </button>
+            </article>
+          );
+        })}
       </div>
-
     </section>
   );
 };
