@@ -32,7 +32,7 @@ function NavbarHim() {
         <div className="nav-icons-him">
           <Link to="/wishlist" aria-label="Wishlist">🤍</Link>
           <Link to="/cart" aria-label="Cart">🛒</Link>
-          <span>👤</span>
+         <Link to="/login?gender=him" aria-label="Login">👤</Link>
         </div>
       </div>
       <div className="navbar-menu-him">

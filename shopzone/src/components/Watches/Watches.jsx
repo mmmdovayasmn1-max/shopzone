@@ -1,11 +1,12 @@
 import "../../styles/ProductCard.css";
 import NavbarHim from "../Navbar/NavbarHim";
-import { menProducts } from "../../data/products";
+import { useProducts } from "../../context/ProductContext";
 import ProductCard from "../ProductCard/ProductCard";
 function Watches() {
 
-  const watches = menProducts.filter(
-    (product) => product.category === "Watches"
+  const { products } = useProducts();
+  const watches = products.filter(
+    (product) => product.gender === "him" && product.category === "Watches"
   );
 
   return (

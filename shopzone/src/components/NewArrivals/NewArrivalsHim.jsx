@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import { menProducts } from "../../data/products";
+import { useProducts } from "../../context/ProductContext";
 import { useCart } from "../../context/CartContext";
 import WishlistButton from "../WishlistButton/WishlistButton";
 import "./NewArrivalsHim.css";
 
 const NewArrivalsHim = () => {
   const { addToCart, cartItems } = useCart();
-  const newArrivals = menProducts.slice(0, 4);
+  const { products } = useProducts();
+  const newArrivals = products.filter((product) => product.gender === "him").slice(0, 4);
 
   return (
     <section className="new-arrivals-him">

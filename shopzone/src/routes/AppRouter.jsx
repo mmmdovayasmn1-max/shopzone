@@ -26,6 +26,8 @@ import AccessoriesHim from "../components/Accessories/AccessoriesHim";
 import Cart from "../components/Cart/Cart";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import SearchResults from "../pages/SearchResults";
+import AdminProduct from "../pages/AdminProduct";
+import AdminRoute from "../components/AdminRoute";
 function AppRouter() {
   return (
     
@@ -55,6 +57,8 @@ function AppRouter() {
 <Route path="/search/him" element={<SearchResults gender="him" />} />
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
+  <Route path="/admin/products/new" element={<AdminRoute><AdminProduct /></AdminRoute>} />
+  <Route path="/admin" element={<AdminRoute><AdminProduct /></AdminRoute>} />
 
   <Route path="*" element={<NotFound />} />
 </Routes>

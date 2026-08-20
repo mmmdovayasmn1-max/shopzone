@@ -2,7 +2,7 @@ import "./ProductDetailsHim.css";
 import Navbar from "../components/Navbar/NavbarHim";
 import Footer from "../components/Footer/Footer";
 import { useParams } from "react-router-dom";
-import { menProducts } from "../data/products";
+import { useProducts } from "../context/ProductContext";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { useState } from "react";
@@ -13,8 +13,9 @@ const ProductDetailsHim = () => {
     const [selectedColor, setSelectedColor] = useState("");
     const [selectedSize, setSelectedSize] = useState("");
 
-    const product = menProducts.find(
-        (item) => item.id === Number(id)
+    const { products } = useProducts();
+    const product = products.find(
+        (item) => item.id === id && item.gender === "him"
     );
 
     if (!product) {

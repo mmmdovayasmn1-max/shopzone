@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import NavbarHim from "../components/Navbar/NavbarHim";
 import ProductCard from "../components/ProductCard/ProductCard";
-import { menProducts, womenProducts } from "../data/products";
+import { useProducts } from "../context/ProductContext";
 import "../styles/ProductCard.css";
 import "./SearchResults.css";
 
@@ -10,7 +10,8 @@ function SearchResults({ gender }) {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q")?.trim() || "";
   const isHer = gender === "her";
-  const products = isHer ? womenProducts : menProducts;
+  const { products: allProducts } = useProducts();
+  const products = allProducts.filter((product) => product.gender === (isHer ? "her" : "him"));
   const matches = products.filter((product) =>
     `${product.name} ${product.category}`.toLowerCase().includes(query.toLowerCase())
   );

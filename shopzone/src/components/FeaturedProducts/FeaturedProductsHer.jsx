@@ -1,7 +1,7 @@
 import "./FeaturedProductsHer.css";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
-import { womenProducts } from "../../data/products";
+import { useProducts } from "../../context/ProductContext";
 import { useCart } from "../../context/CartContext";
 import WishlistButton from "../WishlistButton/WishlistButton";
 const FeaturedProductsHer = () => {
@@ -10,11 +10,12 @@ const FeaturedProductsHer = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [addedProducts, setAddedProducts] = useState([]);
 
-  const products = womenProducts
+  const { products } = useProducts();
+  const womenProducts = products.filter((product) => product.gender === "her");
 const filteredProducts =
   activeCategory === "All"
-    ? products
-    : products.filter(
+    ? womenProducts
+    : womenProducts.filter(
         (product) => product.category === activeCategory
       );
 
